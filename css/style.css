@@ -1,0 +1,33 @@
+section.slider{
+	width: 900px;
+	height: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+ul.slides{
+	-webkit-animation: slide ease 15s infinite;
+	width: 2700px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+}
+
+ul.slides li{
+	float: left;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+@-webkit-keyframes slide{
+	0% 		{ left: 0px; }		/*First slide*/
+	16%		{ left: 0px; }
+	32%		{ left: -900px; }	/*Second slide*/
+	48%		{ left: -900px; }
+	64%		{ left: -1800px; }	/*Third slide*/
+	80%		{ left: -1800px; }
+	100% 	{ left: 0px; }
+}
