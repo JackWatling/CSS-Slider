@@ -1,0 +1,88 @@
+/*  Jack Watling  */
+/*      2012      */
+
+/*Container*/
+section.slider{
+	width: 900px;
+	height: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+/*Slides*/
+ul.slides{
+	width: 4500px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	-webkit-animation: slide ease 25s infinite;
+}
+
+ul.slides h1{
+	font-family: 'RobotoLight';
+	font-weight: normal;
+	position: absolute;
+	margin: 20px;
+	padding: 5px;
+	display: block;
+	color: rgba( 255, 255, 255, 0.5 );
+	background: rgba( 0, 0, 0, 0.5 );
+	opacity: 0;
+	-webkit-transition: opacity 1s;
+}
+
+ul.slides h1 a{
+	font-family: 'RobotoLightItalic';
+	color: rgba( 255, 255, 255, 0.5 );
+	text-decoration: none;
+}
+
+ul.slides h1:hover{
+	border-bottom: 1px dotted rgba( 255, 255, 255, 0.3 );
+}
+
+section.slider ul.slides li:hover h1{
+	opacity: 1;
+}
+
+ul.slides li{
+	float: left;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+/*Progress Bar*/
+section.progress{
+	width: 0%;
+	height: 3px;
+	background: rgba( 255, 255, 255, 0.5 );
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	-webkit-animation: progress ease 5s infinite;
+}
+
+/*Play States*/
+section.slider:hover ul.slides,
+section.slider:hover section.progress{
+	-webkit-animation-play-state: paused;
+}
+
+/*Animations*/
+@-webkit-keyframes slide{
+	0%, 15%, 100%	{ left: 0px; }		/*First slide*/
+	20%, 35%		{ left: -900px; }	/*Second slide*/
+	40%, 55%		{ left: -1800px; }	/*Third slide*/
+	60%, 75% 		{ left: -2700px; }	/*Fourth slide*/
+	80%, 95%		{ left: -3600px; }	/*Fifth slide*/
+}
+
+@-webkit-keyframes progress{
+	0% 		{ width: 0%; opacity: 1; }
+	75% 	{ width: 100%; opacity: 1; }
+	100% 	{ opacity: 0; }
+}

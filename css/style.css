@@ -1,81 +1,49 @@
-section.slider{
+/*  Jack Watling  */
+/*      2012      */
+
+/*General*/
+body{
+	margin: 0;
+	padding: 0;
+	background: #e5e5e5;
+}
+
+.wrapper{
 	width: 900px;
-	height: 300px;
 	margin: 0 auto;
-	overflow: hidden;
-	position: relative;
 }
 
-ul.slides{
-	-webkit-animation: slide ease 25s infinite;
-	width: 4500px;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	position: absolute;
-}
-
-ul.slides h1{
+/*Header*/
+header.main{
 	font-family: 'RobotoLight';
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+header.main h1{
+	font-family: 'RobotoThin';
 	font-weight: normal;
-	position: absolute;
-	margin: 20px;
-	padding: 5px;
-	display: block;
-	color: rgba( 255, 255, 255, 0.5 );
-	background: rgba( 0, 0, 0, 0.5 );
-	opacity: 0;
-	-webkit-transition: opacity 1s;
+	font-size: 3em;
+	color: #919191;
+	text-shadow: 1px 1px 0 #00bdf4;
+	text-align: center;
+	margin: 15px 0 0 0;
 }
 
-ul.slides h1 a{
-	font-family: 'RobotoLightItalic';
-	color: rgba( 255, 255, 255, 0.5 );
-	text-decoration: none;
+/*Content*/
+section.content{
+	padding: 10px 0;
 }
 
-ul.slides h1:hover{
-	border-bottom: 1px dotted rgba( 255, 255, 255, 0.3 );
-	
+section.content p{
+	font-family: 'RobotoLight';
+	color: #a2a2a2;
+	font-size: 0.9em;
+	margin: 10px 0;
+	line-height: 1.25em;
 }
 
-section.progress{
-	width: 0%;
-	height: 3px;
-	background: rgba( 255, 255, 255, 0.5 );
-	display: block;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	-webkit-animation: progress ease 5s infinite;
-}
-
-section.slider:hover ul.slides,
-section.slider:hover section.progress{
-	-webkit-animation-play-state: paused;
-}
-
-section.slider ul.slides li:hover h1{
-	opacity: 1;
-}
-
-ul.slides li{
-	float: left;
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-}
-
-@-webkit-keyframes slide{
-	0%, 15%, 100%	{ left: 0px; }		/*First slide*/
-	20%, 35%		{ left: -901px; }	/*Second slide*/
-	40%, 55%		{ left: -1801px; }	/*Third slide*/
-	60%, 75% 		{ left: -2701px; }	/*Fourth slide*/
-	80%, 95%		{ left: -3601px; }	/*Fifth slide*/
-}
-
-@-webkit-keyframes progress{
-	0% 		{ width: 0%; opacity: 1; }
-	75% 	{ width: 100%; opacity: 1; }
-	100% 	{ opacity: 0; }
+/*Slider*/
+section.slider{
+	background: black;
 }
