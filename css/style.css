@@ -60,15 +60,15 @@ ul.slides li{
 }
 
 @-webkit-keyframes slide{
-	0%, 10%, 100%	{ left: 0px; }		/*First slide*/
-	20%, 30%		{ left: -900px; }	/*Second slide*/
-	40%, 50%		{ left: -1800px; }	/*Third slide*/
-	60%, 70% 		{ left: -2700px; }	/*Fourth slide*/
-	80%, 90%		{ left: -3600px; }	/*Fifth slide*/
+	0%, 15%, 100%	{ left: 0px; }		/*First slide*/
+	20%, 35%		{ left: -901px; }	/*Second slide*/
+	40%, 55%		{ left: -1801px; }	/*Third slide*/
+	60%, 75% 		{ left: -2701px; }	/*Fourth slide*/
+	80%, 95%		{ left: -3601px; }	/*Fifth slide*/
 }
 
 @-webkit-keyframes progress{
-	0% 			{ width: 0%; opacity: 1; }
-	50% 		{ width: 100%; opacity: 1; }
-	75%, 100% 	{ opacity: 0; }
+	0% 		{ width: 0%; opacity: 1; }
+	75% 	{ width: 100%; opacity: 1; }
+	100% 	{ opacity: 0; }
 }
