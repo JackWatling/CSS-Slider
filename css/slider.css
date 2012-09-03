@@ -29,8 +29,9 @@ ul.slides h1{
 	display: block;
 	color: rgba( 255, 255, 255, 0.5 );
 	background: rgba( 0, 0, 0, 0.5 );
+	-webkit-box-shadow: 0 9px 0px -6px rgba( 255, 255, 255, 0 );
 	opacity: 0;
-	-webkit-transition: opacity 1s;
+	-webkit-transition: all 1s;
 }
 
 ul.slides h1 a{
@@ -40,7 +41,7 @@ ul.slides h1 a{
 }
 
 ul.slides h1:hover{
-	border-bottom: 1px dotted rgba( 255, 255, 255, 0.3 );
+	-webkit-box-shadow: 0 9px 0px -6px rgba( 255, 255, 255, 0.2 );
 }
 
 section.slider ul.slides li:hover h1{
