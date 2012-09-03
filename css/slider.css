@@ -18,6 +18,7 @@ ul.slides{
 	margin: 0;
 	position: absolute;
 	-webkit-animation: slide ease 25s infinite;
+	-moz-animation: slide ease 25s infinite;
 }
 
 ul.slides h1{
@@ -29,9 +30,12 @@ ul.slides h1{
 	display: block;
 	color: rgba( 255, 255, 255, 0.5 );
 	background: rgba( 0, 0, 0, 0.5 );
-	-webkit-box-shadow: 0 9px 0px -6px rgba( 255, 255, 255, 0 );
 	opacity: 0;
+	box-shadow: 0 9px 0 -6px rgba( 255, 255, 255, 0 );
+	-webkit-box-shadow: 0 9px 0 -6px rgba( 255, 255, 255, 0 );
+	-moz-box-shadow: 9px 0 -6px rgba( 255, 255, 255, 0 );
 	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
 }
 
 ul.slides h1 a{
@@ -41,7 +45,9 @@ ul.slides h1 a{
 }
 
 ul.slides h1:hover{
-	-webkit-box-shadow: 0 9px 0px -6px rgba( 255, 255, 255, 0.2 );
+	box-shadow: 0 9px 0 -6px rgba( 255, 255, 255, 0.2 );
+	-webkit-box-shadow: 0 9px 0 -6px rgba( 255, 255, 255, 0.2 );
+	-moz-box-shadow: 0 9px 0 -6px rgba( 255, 255, 255, 0.2 );
 }
 
 section.slider ul.slides li:hover h1{
@@ -65,12 +71,14 @@ section.progress{
 	bottom: 0;
 	left: 0;
 	-webkit-animation: progress ease 5s infinite;
+	-moz-animation: progress ease 5s infinite;
 }
 
 /*Play States*/
 section.slider:hover ul.slides,
 section.slider:hover section.progress{
 	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
 }
 
 /*Animations*/
@@ -83,6 +91,20 @@ section.slider:hover section.progress{
 }
 
 @-webkit-keyframes progress{
+	0% 		{ width: 0%; opacity: 1; }
+	75% 	{ width: 100%; opacity: 1; }
+	100% 	{ opacity: 0; }
+}
+
+@-moz-keyframes slide{
+	0%, 15%, 100%	{ left: 0px; }		/*First slide*/
+	20%, 35%		{ left: -900px; }	/*Second slide*/
+	40%, 55%		{ left: -1800px; }	/*Third slide*/
+	60%, 75% 		{ left: -2700px; }	/*Fourth slide*/
+	80%, 95%		{ left: -3600px; }	/*Fifth slide*/
+}
+
+@-moz-keyframes progress{
 	0% 		{ width: 0%; opacity: 1; }
 	75% 	{ width: 100%; opacity: 1; }
 	100% 	{ opacity: 0; }
