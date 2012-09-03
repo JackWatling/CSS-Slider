@@ -15,6 +15,27 @@ ul.slides{
 	position: absolute;
 }
 
+ul.slides h1{
+	font-family: 'RobotoLight';
+	font-weight: normal;
+	position: absolute;
+	margin: 20px;
+	padding: 5px;
+	display: block;
+	color: rgba( 255, 255, 255, 0.5 );
+	background: rgba( 0, 0, 0, 0.5 );
+}
+
+ul.slides h1 a{
+	font-family: 'RobotoLightItalic';
+	color: rgba( 255, 255, 255, 0.5 );
+	text-decoration: none;
+}
+
+ul.slides h1 a:hover{
+	border-bottom: 1px dotted rgba( 255, 255, 255, 0.3 );
+}
+
 section.progress{
 	width: 0%;
 	height: 3px;
