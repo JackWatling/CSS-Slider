@@ -24,6 +24,8 @@ ul.slides h1{
 	display: block;
 	color: rgba( 255, 255, 255, 0.5 );
 	background: rgba( 0, 0, 0, 0.5 );
+	opacity: 0;
+	-webkit-transition: opacity 1s;
 }
 
 ul.slides h1 a{
@@ -32,8 +34,9 @@ ul.slides h1 a{
 	text-decoration: none;
 }
 
-ul.slides h1 a:hover{
+ul.slides h1:hover{
 	border-bottom: 1px dotted rgba( 255, 255, 255, 0.3 );
+	
 }
 
 section.progress{
@@ -50,6 +53,10 @@ section.progress{
 section.slider:hover ul.slides,
 section.slider:hover section.progress{
 	-webkit-animation-play-state: paused;
+}
+
+section.slider ul.slides li:hover h1{
+	opacity: 1;
 }
 
 ul.slides li{
